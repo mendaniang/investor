@@ -1,0 +1,195 @@
+@import "styles/mixin";
+$primary: 	#1375D8;
+$secondary: #70D5AD;
+$third: #919191;
+$forth: #c1c1c1;
+$fifth: #e4e4e4;
+$blue:#1174de;
+$green:#6ad4ad;
+$middle:#5DBCD2;
+$componentPadding: 80px;
+//break points
+$biggest-break: 1200px;
+$break-980: 980px;
+$break-800: 800px;
+$break-700: 700px;
+$break-580: 580px;
+$break-400: 400px;
+html, body{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+body{
+    overflow: auto;
+	font-family: Arial;
+}
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+img {
+    vertical-align: middle;
+    max-width: 100%;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    a:focus {
+        outline: 1px;
+    }
+}
+.mainContent{
+    position: relative;
+    height: 100%;
+    @media screen and (max-width:  $break-800) {
+        overflow: scroll;
+    }
+}
+#content{
+    width: 100%;
+    height: 100%;
+}
+.hidden{
+    position: absolute;
+    width: 0;
+    height: 0;
+    display: none;
+    overflow: hidden;
+    visibility: hidden;
+}
+.f-paragraph{
+    font-family: serif;
+}
+.m-form{
+    &__section{
+        display: inline-block;
+        min-height: 50px;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    &__column{
+        width: calc(50% - 10px);
+        @media screen and (max-width:  $break-580) {
+            width:100%;
+        }
+    }
+    &__half{
+        box-sizing:  border-box;
+        float: left;
+        width: calc(50% - 10px);
+        &:last-of-type{
+            margin-left: 20px;
+        }
+        @media screen and (max-width:  $break-580) {
+            width: 100%;
+            float:none;
+            &:last-child{
+                margin-left:0;
+                margin-top: 10px;
+            }
+        }
+    }
+    &__field{
+        @extend .f-paragraph;
+        width: 100%;
+        height: 40px;
+        border: 1px solid #c1c0c0;
+        border-radius: 3px;
+        text-indent: 10px;
+        background: none;
+        &:hover, &:focus{
+            border: 1px solid $secondary;
+        }
+    }
+    &__dropdown{
+        @extend .f-paragraph;
+        width: 100%;
+        height: 44px;
+        border: 1px solid #c1c0c0;
+        border-radius: 3px;
+        background: none;
+        text-indent:  10px;
+        cursor: pointer;
+    }
+    &__textArea{
+        @extend .f-paragraph;
+        width: 100%;
+        max-width: calc(100% - 20px);
+        min-height: 150px;
+        border: 1px solid #c1c0c0;
+        border-radius: 3px;
+        padding: 10px;
+        margin-bottom: 10px;
+        &:hover, &:focus{
+            border: 1px solid $secondary;
+        }
+    }
+    &__label{
+        position: absolute !important;
+        top: -9999px !important;
+        left: -9999px !important;
+    }
+    &__error{
+        @extend .f-paragraph;
+        display: none;
+        position:relative;
+        min-height:20px;
+        margin:0;
+        padding:0;
+        color:$primary;
+        text-align: left;
+        padding-bottom:10px;
+        padding-top:10px;
+    }
+    &__success{
+        display: none;
+        position:relative;
+        margin:0;
+        text-align: right;
+        padding-bottom:10px;
+        padding-top:50px;
+    }
+}
+@keyframes expandCard {
+    from {
+        transform:scale(0.1);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+.icon {
+    font-family: 'HSBCIcon-Font';
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    font-weight: 400;
+    font-style: normal;
+    text-decoration: inherit;
+    text-transform: none;
+    text-rendering: auto;
+}
+
+$mainColor:#dd001e;
+$secondaryColor : #db0011;
+
+$textColor:#375780; 
+$disbaledButton: #a0b3cb;
+
+.table {
+	width: 100%;
+	tr:first-child {
+		background-color:red;
+	}
+	td,th {
+		padding: 10px;
+	}
+	tr:nth-child(even) {
+		background-color: #9f9f9f;
+	}
+}

@@ -1,0 +1,108 @@
+@mixin border-radius($radius) {
+    -webkit-border-radius:  $radius;
+    -moz-border-radius:     $radius;
+    -o-border-radius:       $radius;
+    -ms-border-radius:      $radius;
+    border-radius:          $radius;
+}
+
+@mixin transition($transition...) {
+    -webkit-transition: $transition;
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -ms-transition:     $transition;
+    transition:         $transition;
+}
+
+@mixin transform($transforms) {
+    -webkit-transform: $transforms;
+    -moz-transform: $transforms;
+    -ms-transform: $transforms;
+    transform: $transforms;
+}
+
+@mixin translateX($translateX) {
+  -webkit-transform: translateX($translateX);
+  -moz-transform: translateX($translateX);
+  -ms-transform: translateX($translateX);
+  transform: translateX($translateX);
+}
+
+@mixin translateY($translateY) {
+  -webkit-transform: translateY($translateY);
+  -moz-transform: translateY($translateY);
+  -ms-transform: translateY($translateY);
+  transform: translateY($translateY);
+}
+
+@mixin transform3d($X, $Y, $Z) {
+  -webkit-transform: transform3d($X, $Y, $Z);
+  -moz-transform: transform3d($X, $Y, $Z);
+  -ms-transform: transform3d($X, $Y, $Z);
+  transform: transform3d($X, $Y, $Z);
+}
+
+@mixin animation($animation...) {
+  -o-animation: $animation;
+  -moz-animation: $animation;
+  -webkit-animation: $animation;
+  -ms-animation: $animation;
+  animation: $animation;
+}
+
+@mixin calc($calculate) {
+  width: -webkit-calc($calculate);
+  width:    -moz-calc($calculate);
+  width:         calc($calculate);
+}
+
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+@mixin optional-at-root($sel) {
+  @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+    @content;
+  }
+}
+@mixin placeholder {
+  @include optional-at-root('::-webkit-input-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root('::-moz-placeholder') {
+    @content;
+  }
+
+  @include optional-at-root(':-ms-input-placeholder') {
+    @content;
+  }
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); 
+}
+
+@mixin shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
