@@ -1,1 +1,10 @@
-.header{}
+.header{
+    position:absolute;
+    top:0;
+    right:0;
+    height:70px;
+    width:100%;
+    display:block;
+    max-width:160px;
+    background:grey;
+}

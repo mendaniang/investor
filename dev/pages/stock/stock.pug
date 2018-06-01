@@ -3,16 +3,33 @@ block scripts
 	script(src="/js/stock.js") 
 block content 
 	div.stock
+		include ./../../components/header/header.pug
 		div.stock__background
-			include ./../../components/header/header.pug
+			
 			p.stock__headline stock
-				ul.tags
-					li.tag Preffered stock 
-					li.tag Common stock
+			div.stock__search
+				input.search(type="search" placeholder="company key word...")
+				a.searchIcon 
+					div.searchIcon__circle
+					div.searchIcon__rectangle
+			ul.tags 
+				li.tag Preffered stock 
+				li.tag Common stock
 
-			div.stock__compare
-				div.stock__portfolio
-				div.stock__preferred
-				div.stock__common
-		
+			div.stock__chart
+				div.stock__thread
+					tr.stock__container
+						th Symbol
+						th Price
+						th Change
+						th Change%
+				div.table 
+					tr 
+						th 
+						th a
+					tr 
+						td b
+						td b
+				
+						
 

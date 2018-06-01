@@ -1,10 +1,68 @@
 .stock{
+  display:block;
     &__headline{
         @extend .f-header;
         margin: 25px;
+        float:left;
 
     }
+    &__chart{
+      background:lightcoral;
+      width:30%;
+      height:500px;
+      @include border-radius(6px);
+    }
+    .search{
+      line-height: 26px;
+       color:#D3D3D3;
+        border:1px solid #D3D3D3;
+        @include border-radius(6px);
+        font-size:15px;
+    }
 
+    .searchIcon {
+      cursor:pointer;
+      position: relative;
+      width:50px;
+      margin: 0 auto;
+      padding: 50px 0;
+      text-align: center;
+  
+    
+      &__circle {
+        display:inline-block;
+   
+        width: 30px;
+        height: 30px;
+        border: 4px solid grey;
+        border-radius: 100px;
+      }
+    
+      &__rectangle {
+        position: absolute;
+        right: -4px;
+        bottom: 45px;
+        width: 15px;
+        transform: rotate(52deg);
+        border: 4px solid grey;
+        border-top-right-radius: 12px;
+        border-bottom-right-radius: 12px;
+      }
+      &__thread{
+       
+      }
+      &__table{
+        display: table;
+        border-collapse: separate;
+        border-spacing: 2px;
+      }
+     
+      &:hover, &:focus{
+          background-color:$primary;
+          color:white;
+      }
+
+    }
     .tags {
         list-style: none;
         margin-left: 20px;
@@ -62,5 +120,6 @@
       .tag:hover::after {
          border-left-color: crimson; 
       }
+   
   
 }
