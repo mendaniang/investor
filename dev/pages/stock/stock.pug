@@ -6,30 +6,44 @@ block content
 		include ./../../components/header/header.pug
 		div.stock__background
 			
-			p.stock__headline stock
+			p.stock__headline Kiveo AG
 			div.stock__search
 				input.search(type="search" placeholder="company key word...")
 				a.searchIcon 
 					div.searchIcon__circle
 					div.searchIcon__rectangle
-			ul.tags 
-				li.tag Preffered stock 
+			ul.tags
+				li.tag Company Profile
+				li.tag Preferred stock 
 				li.tag Common stock
 
-			div.stock__chart
+			div.stock__table
 				div.stock__thread
-					tr.stock__container
-						th Symbol
-						th Price
-						th Change
-						th Change%
-				div.table 
+					tr
+						div.titleFirst
+							span  Market
+						th(scope="col")
+							div.titles
+								span Price
+						th(scope="col")
+							div.titles
+								span Change
+						th(scope="col")
+							div.titles
+								span Change%
+				div.stock__tbody
 					tr 
-						th 
-						th a
-					tr 
-						td b
-						td b
-				
+						div.rowFirst
+							span New York Stock Exchange
+						td
+							div.rows 
+								span Deutsche Borse Frankfurt
+						td
+							div.rows 
+								span Hong Kong Stock Exchange
+						td
+							div.rows 
+								span London Stock Exchange
+		
 						
 
