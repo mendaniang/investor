@@ -9,21 +9,37 @@
   "license": "ISC",
   "dependencies": {
     "gulp": "^3.9.1",
+<<<<<<< HEAD
     "gulp-cms-prep": "^1.0.3",
+=======
+    "gulp-cms-prep": "^1.0.2",
+>>>>>>> 0a556d5b5e45a99730a3236886fdd9e5a11465d0
     "gulp-coffee": "latest",
     "gulp-connect": "latest",
     "gulp-file-insert": "^1.0.3",
     "gulp-html-beautify": "^1.0.1",
+<<<<<<< HEAD
     "gulp-inject-string": "^1.1.1",
+=======
+    "gulp-inject-string": "^1.1.0",
+>>>>>>> 0a556d5b5e45a99730a3236886fdd9e5a11465d0
     "gulp-livereload": "^3.8.1",
     "gulp-minify": "^1.0.0",
     "gulp-remove-code": "^1.0.2",
     "gulp-replace": "^0.6.1",
+<<<<<<< HEAD
     "gulp-strip-comments": "^2.5.2",
     "gulp-util": "^3.0.8",
     "install": "^0.11.0",
     "npm": "^6.1.0",
     "run-sequence": "^2.2.1"
+=======
+    "gulp-strip-comments": "^2.5.1",
+    "gulp-util": "latest",
+    "install": "^0.11.0",
+    "npm": "^6.1.0",
+    "run-sequence": "^2.0.0"
+>>>>>>> 0a556d5b5e45a99730a3236886fdd9e5a11465d0
   },
   "devDependencies": {
     "gulp-check-unused-css": "^2.1.4",
@@ -37,7 +53,11 @@
     "gulp-install": "^1.1.0",
     "gulp-load-plugins": "^1.5.0",
     "gulp-merge": "^0.1.1",
+<<<<<<< HEAD
     "gulp-postcss": "^7.0.1",
+=======
+    "gulp-postcss": "^7.0.0",
+>>>>>>> 0a556d5b5e45a99730a3236886fdd9e5a11465d0
     "gulp-pug": "^4.0.1",
     "gulp-rename": "^1.2.3",
     "gulp-sass": "^4.0.1",
@@ -46,7 +66,11 @@
     "gulp-uglify": "^3.0.0",
     "gulp-watch": "^5.0.0",
     "postcss-pxtorem": "^4.0.1",
+<<<<<<< HEAD
     "typescript": "^2.9.1",
+=======
+    "typescript": "^2.8.3",
+>>>>>>> 0a556d5b5e45a99730a3236886fdd9e5a11465d0
     "yargs": "^11.0.0"
   }
 }
