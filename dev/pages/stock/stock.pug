@@ -1,0 +1,85 @@
+extends ../../layout.pug 
+block scripts 
+	script(src="/js/stock.js") 
+block content 
+	div.stock
+		include ./../../components/header/header.pug
+		div.stock__background
+
+			p.stock__headline Kiveo AG
+			div.stock__search
+				input.search(type="search" placeholder="company key word...")
+				a.searchIcon 
+					div.searchIcon__circle
+					div.searchIcon__rectangle
+			ul.tags
+				li.tag Company Profile
+				li.tag Preferred stock 
+				li.tag Common stock
+			div.stock__charts
+				div.stock__table.profile
+					div.stock__thread
+						tr
+							div.titleFirst
+								span  Company Profile
+					div.stock__tbody
+						
+
+				div.stock__table
+					div.stock__thread
+						tr
+							div.titleFirst
+								span  
+								| Preferred Stock
+							th(scope="col")
+								div.titles
+									span Price
+							th(scope="col")
+								div.titles
+									span Change
+							th(scope="col")
+								div.titles
+									span Change%
+					div.stock__tbody
+						tr 
+							div.rowFirst
+								span New York Stock Exchange
+							td
+								div.rows 
+									span Deutsche Borse Frankfurt
+							td
+								div.rows 
+									span Hong Kong Stock Exchange
+							td
+								div.rows 
+									span London Stock Exchange
+				div.stock__table
+					div.stock__thread
+						tr
+							div.titleFirst
+								span  
+								| Common Stock
+							th(scope="col")
+								div.titles
+									span Price
+							th(scope="col")
+								div.titles
+									span Change
+							th(scope="col")
+								div.titles
+									span Change%
+					div.stock__tbody
+						tr 
+							div.rowFirst
+								span New York Stock Exchange
+							td
+								div.rows 
+									span Deutsche Borse Frankfurt
+							td
+								div.rows 
+									span Hong Kong Stock Exchange
+							td
+								div.rows 
+									span London Stock Exchange
+						
+

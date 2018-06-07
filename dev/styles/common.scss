@@ -1,0 +1,222 @@
+.mainbg{
+    width: 60%;
+    height: 100%;
+    float: left;
+    &:after {
+        content:"";
+        background:$primary;
+        position:fixed;
+        top:0;
+        bottom:0;
+        right:60%;
+        left:0;
+        content:" ";
+        z-index:-1;
+        @media screen and (max-width:  $break-980) {
+            width: 100%;
+        }
+        @media screen and (max-width:  $break-800) {
+            display: none;
+        }
+    }
+	@media screen and (max-width:  $break-980) {
+	    width: 100%;
+	}
+}
+
+.menuActive{
+    width: 100%;
+    @include transition(all .5s);
+}
+.mainContentClose{
+    margin-left: 100%;
+}
+
+.input-line{
+    width:100%;
+    @extend .f-input;
+    height: auto;
+    border: 1.5px solid $primary;
+    padding: 5px 16px;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+}
+.input-editor{
+    width:100%;
+    height: auto;
+    border: 1.5px solid $primary;
+    padding: 1px;
+    @extend .f-input;
+    background-position: bottom right;
+    background-repeat: no-repeat; 
+}
+.rightSection{
+    position: relative;
+    //float:left;
+    padding: 20px;
+    //padding-left:50px;
+    //padding-right:40px;
+    //width:60%;
+    max-width: 840px;
+    @include transition(all .5s);
+    @media screen and (max-width:  $break-980) {
+        //width: 70%;
+    }
+    @media screen and (max-width:  $break-800) {
+        width: 100%;
+        padding: 0 30px;
+    }
+}
+.rightHeadContent{
+    position: relative;
+    display: inline-block;
+    width:100%;
+    min-height:100%;
+    padding-bottom: 15px;
+    border-bottom:2px solid #aaa;
+
+    &__generalHamburger{
+        display: none;
+        position: relative;
+        margin-top: 20px;
+        height: 24px;
+        width: 30px;
+        cursor: pointer;
+        i{
+            display: block;
+            top: 10px;
+            width: 30px;
+            height: 3px;
+            background: $primary;
+            margin-bottom: 4px;
+            position: absolute;
+            &:before{
+                content: '';
+                position: absolute;
+                width: 30px;
+                height: 3px;
+                background: $primary;
+                left: 0;
+                top: -7px;
+            }
+            &:after{
+                content: '';
+                position: absolute;
+                width: 30px;
+                height: 3px;
+                background: $primary;
+                left: 0;
+                top: 7px;
+            }
+        }
+        @media screen and (max-width:  $break-800) {
+            display: block;
+        }
+    }
+    &__title{
+        @extend .f-title;
+        margin-top:35px;
+        margin-bottom:30px;
+    } 
+    &__left, &__right{
+        display:block;
+        float:left;  
+        width:50%; 
+        @media screen and (max-width:  $break-980) {
+            width: 100%;
+        }
+    }
+    &__right{
+        @media screen and (max-width:  $break-980) {
+            margin-top: 15px;
+        }
+    }
+    &__block,&__langs{
+        float:right;
+        @media screen and (max-width:  $break-980) {
+            float: left;
+            width: 100%;
+        }
+    }
+    &__block{
+        display:block;
+        clear:both;
+        margin-top:15px;  
+    }
+    &__top{
+        float: right;
+        @media screen and (max-width:  $break-980) {
+            width: 100%;
+        }
+    }
+    &__bottom{
+        float: left;
+        @media screen and (max-width:  $break-980) {
+            width: 100%;
+            margin-top: 15px;
+        }
+    }
+    &__langs, &__pages, &__label, &__versions, select{
+        @extend .f-input;
+    }
+    &__pages{
+        float:left;       
+    }
+    
+    &__label{
+        vertical-align: middle;
+        margin-right:15px;
+    }
+    &__versions{ 
+        @media screen and (max-width:  $break-980) {
+            float: left;
+        }
+    }
+    select{
+    	-webkit-appearance: none;
+    	-moz-appearance: none;
+    	appearance: none;
+        padding: 5px;
+        color:$primary;
+        border: 2px solid $primary;
+        cursor: pointer;
+    }
+}
+.mainForm{
+    overflow-y: scroll;
+    height: 600px;
+    &__messages{
+        clear:both;
+        padding-right:30px;
+    }
+    &__inputHeader{
+        @extend .f-header;
+        margin-top:30px;
+        margin-bottom:10px; 
+    }
+    &__termsHeader{
+        @extend .f-input;
+    }
+    &__submit{
+        float:right;
+        margin-top:65px;
+        margin-bottom: 30px;
+        height: auto;
+        width:auto;
+        text-align:center;
+        border: 1.5px solid $primary;
+        color:$primary;
+        background-color: #fff;
+        padding-left: 38px;
+        padding-right: 38px; 
+        padding-top:5px;
+        padding-bottom:5px;
+        cursor: pointer; 
+        @extend .f-button;
+        @include transition(all .5s);
+        &:hover, &:focus{
+            background-color: $primary;
+            color: #fff;
+        }
+    }
+}
